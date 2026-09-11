@@ -39,5 +39,6 @@ Aplicación web y API REST desarrollada como agenda de contactos utilizando **AS
 -- Una vez iniciado el contenedor, la interfaz web estara disponible en http://localhost:8080 (o http://localhost:8080/Contactos) y la documentacion interactiva de Swagger en http://localhost:8080/swagger. Para detener el servicio, ejecutar docker compose down.
 
 ### Opcion B - Ejecucion Local en Desarrollo:
-Restaurar las dependencias del proyecto mediante dotnet restore y ejecutar la aplicacion con dotnet run (el sistema aplicara las migraciones de SQLite de manera automatica al iniciar). Finalmente, abrir el navegador en la URL proporcionada por la consola, accediendo a la interfaz web en https://localhost:puerto/Contactos y a la documentacion de la API en https://localhost:puerto/swagger.
+-- Restaurar las dependencias del proyecto mediante dotnet restore y ejecutar la aplicacion con dotnet run (el sistema aplicara las migraciones de SQLite de manera automatica al iniciar). 
+-- Finalmente, abrir el navegador en la URL proporcionada por la consola, accediendo a la interfaz web en https://localhost:puerto/Contactos y a la documentacion de la API en https://localhost:puerto/swagger.
 =======
