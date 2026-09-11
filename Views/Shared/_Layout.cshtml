@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VaultContactos</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VaultContactos.styles.css" asp-append-version="true" />
+
+<style>
+    /* Estilos inspirados en GitHub Dark Theme */
+    body {
+        background-color: #0d1117 !important;
+        color: #c9d1d9 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    
+    .navbar {
+        background-color: #161b22 !important;
+        border-bottom: 1px solid #30363d;
+    }
+
+    .navbar-brand, .nav-link {
+        color: #c9d1d9 !important;
+    }
+
+    .nav-link:hover {
+        color: #58a6ff !important;
+    }
+
+    footer {
+        background-color: #161b22 !important;
+        border-top: 1px solid #30363d;
+        color: #8b949e !important;
+    }
+
+    /* Tarjetas y contenedores estilo GitHub */
+    .github-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Tablas limpias oscuras */
+    .table-dark-custom {
+        color: #c9d1d9;
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .table-dark-custom th {
+        background-color: #21262d;
+        border-bottom: 1px solid #30363d;
+        color: #f0f6fc;
+    }
+
+    .table-dark-custom td {
+        border-top: 1px solid #30363d;
+        vertical-align: middle;
+    }
+
+    /* Botones estilo GitHub */
+    .btn-github-primary {
+        background-color: #238636;
+        color: #fff;
+        border: 1px solid rgba(240,246,252,0.1);
+        font-weight: 500;
+    }
+    .btn-github-primary:hover {
+        background-color: #2ea043;
+        color: #fff;
+    }
+
+    .form-control {
+        background-color: #0d1117 !important;
+        border: 1px solid #30363d !important;
+        color: #c9d1d9 !important;
+    }
+    .form-control:focus {
+        border-color: #58a6ff !important;
+        box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.3);
+        color: #c9d1d9 !important;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VaultContactos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-Item">
+        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-Item">
+        <a class="nav-link text-light" asp-area="" asp-controller="Contactos" asp-action="Index">Contactos</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" href="/swagger" target="_blank">API Docs (Swagger)</a>
+</li>
+    <li class="nav-Item">
+        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+</ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - VaultContactos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
